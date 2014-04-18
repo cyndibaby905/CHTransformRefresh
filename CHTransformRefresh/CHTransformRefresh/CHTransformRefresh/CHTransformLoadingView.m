@@ -73,13 +73,97 @@
 
 - (void)startAnimation
 {
+    
+    
+    CGRect backFrame = CGRectMake((self.frame.size.width - CHTransformLoadingViewBigSize)/2, self.frame.size.height - CHTransformLoadingViewBigSize - CHTransformLoadingViewPadding, CHTransformLoadingViewBigSize, CHTransformLoadingViewBigSize);
+    CGRect frontFrame = CGRectMake((self.frame.size.width - CHTransformLoadingViewSmallSize)/2, self.frame.size.height - CHTransformLoadingViewPadding - (CHTransformLoadingViewBigSize - CHTransformLoadingViewPadding), CHTransformLoadingViewSmallSize, CHTransformLoadingViewSmallSize);
+    
+    CGPoint backFromPosition = CGPointMake(backFrame.origin.x + backFrame.size.width / 2.0,backFrame.origin.y + backFrame.size.height / 2.0);
+    CGPoint frontFromPosition = CGPointMake(frontFrame.origin.x + frontFrame.size.width / 2.0,frontFrame.origin.y + frontFrame.size.height / 2.0);
 
+    
+    CGPoint backToPosition = backFromPosition;
+    backToPosition.x += 15;
+    CGPoint frontToPosition = frontFromPosition;
+    frontToPosition.x -= 15;
+    
+    
+    
+
+    
+    
+    
+    
+    CABasicAnimation *backPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    backPositionAnimation.fromValue = [NSValue valueWithCGPoint:backFromPosition];
+    backPositionAnimation.toValue = [NSValue valueWithCGPoint:backToPosition];
+    
+
+    CABasicAnimation* backScaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    backScaleAnimation.fromValue = [NSNumber numberWithFloat:1];
+    backScaleAnimation.toValue = [NSNumber numberWithFloat:0.5];
+    
+    
+    
+    
+    CAAnimationGroup *backGroup = [CAAnimationGroup animation];
+    [backGroup setAnimations:[NSArray arrayWithObjects: backPositionAnimation, backScaleAnimation, nil]];
+    backGroup.duration = 0.3;
+    backGroup.beginTime = CACurrentMediaTime();
+    backGroup.removedOnCompletion = NO;
+    backGroup.fillMode = kCAFillModeForwards;
+    [_backView.layer addAnimation:backGroup forKey:@"backAnimation"];
+
+    
+    
+    
+    CABasicAnimation *backSurroundkPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    backSurroundkPositionAnimation.fromValue = [NSValue valueWithCGPoint:backToPosition];
+    backSurroundkPositionAnimation.toValue = [NSValue valueWithCGPoint:frontToPosition];
+    backSurroundkPositionAnimation.duration = .6f;
+    backSurroundkPositionAnimation.beginTime = CACurrentMediaTime() + 0.3f;
+    backSurroundkPositionAnimation.repeatCount = HUGE_VALF;
+    backSurroundkPositionAnimation.autoreverses = YES;
+    backSurroundkPositionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    backSurroundkPositionAnimation.removedOnCompletion = NO;
+    
+    [_backView.layer addAnimation:backSurroundkPositionAnimation forKey:@"backSurroundAnimation"];
+
+    
+    
+    
+    
+    
+    
+    CABasicAnimation *frontPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    frontPositionAnimation.fromValue = [NSValue valueWithCGPoint:frontFromPosition];
+    frontPositionAnimation.toValue = [NSValue valueWithCGPoint:frontToPosition];
+    frontPositionAnimation.duration = 0.3;
+    frontPositionAnimation.beginTime = CACurrentMediaTime();
+    frontPositionAnimation.removedOnCompletion = NO;
+    frontPositionAnimation.fillMode = kCAFillModeForwards;
+    [_frontView.layer addAnimation:frontPositionAnimation forKey:@"frontAnimation"];
+    
+    
+    
+    CABasicAnimation *frontSurroundkPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    frontSurroundkPositionAnimation.fromValue = [NSValue valueWithCGPoint:frontToPosition];
+    frontSurroundkPositionAnimation.toValue = [NSValue valueWithCGPoint:backToPosition];
+    frontSurroundkPositionAnimation.duration = .6f;
+    frontSurroundkPositionAnimation.beginTime = CACurrentMediaTime() + 0.3f;
+    frontSurroundkPositionAnimation.repeatCount = HUGE_VALF;
+    frontSurroundkPositionAnimation.autoreverses = YES;
+    frontSurroundkPositionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    frontSurroundkPositionAnimation.removedOnCompletion = NO;
+    [_frontView.layer addAnimation:frontSurroundkPositionAnimation forKey:@"backSurroundAnimation"];
+    
 }
 
 
 - (void)endAnimation
 {
-
+    [_frontView.layer removeAllAnimations];
+    [_backView.layer removeAllAnimations];
 }
 
 @end
