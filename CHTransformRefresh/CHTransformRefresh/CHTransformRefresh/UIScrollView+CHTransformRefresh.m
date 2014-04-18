@@ -81,7 +81,7 @@ typedef enum
 
 
 static char UIScrollViewTransformRefresh;
-@implementation UIScrollView (GifPullToRefresh)
+@implementation UIScrollView (TransformRefresh)
 
 
 - (void)setRefreshControl:(CHTransformRefreshView *)pullToRefreshView {

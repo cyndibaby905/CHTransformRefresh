@@ -33,7 +33,7 @@
 - (void)endLoading;
 @end
 
-@interface UIScrollView (GifPullToRefresh)
+@interface UIScrollView (TransformRefresh)
 @property(nonatomic,strong)CHTransformRefreshView *refreshControl;
 
 - (void)addPullToRefreshWithActionHandler:(void (^)(void))actionHandler;
