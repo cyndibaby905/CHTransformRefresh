@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		772F2C0E19010FC7005258DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C0D19010FC7005258DD /* Foundation.framework */; };
+		772F2C1019010FC7005258DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C0F19010FC7005258DD /* CoreGraphics.framework */; };
+		772F2C1219010FC7005258DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C1119010FC7005258DD /* UIKit.framework */; };
+		772F2C1819010FC7005258DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 772F2C1619010FC7005258DD /* InfoPlist.strings */; };
+		772F2C1A19010FC7005258DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C1919010FC7005258DD /* main.m */; };
+		772F2C1E19010FC7005258DD /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C1D19010FC7005258DD /* CHAppDelegate.m */; };
+		772F2C2719010FC7005258DD /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C2619010FC7005258DD /* CHViewController.m */; };
+		772F2C2919010FC7005258DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772F2C2819010FC7005258DD /* Images.xcassets */; };
+		772F2C3019010FC7005258DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C2F19010FC7005258DD /* XCTest.framework */; };
+		772F2C3119010FC7005258DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C0D19010FC7005258DD /* Foundation.framework */; };
+		772F2C3219010FC7005258DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772F2C1119010FC7005258DD /* UIKit.framework */; };
+		772F2C3A19010FC7005258DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 772F2C3819010FC7005258DD /* InfoPlist.strings */; };
+		772F2C3C19010FC7005258DD /* CHTransformRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C3B19010FC7005258DD /* CHTransformRefreshTests.m */; };
+		772F2C4A19011012005258DD /* CHTransformLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C4719011012005258DD /* CHTransformLoadingView.m */; };
+		772F2C4B19011012005258DD /* UIScrollView+CHTransformRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F2C4919011012005258DD /* UIScrollView+CHTransformRefresh.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		772F2C3319010FC7005258DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772F2C0219010FC7005258DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 772F2C0919010FC7005258DD;
+			remoteInfo = CHTransformRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		772F2C0A19010FC7005258DD /* CHTransformRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHTransformRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		772F2C0D19010FC7005258DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		772F2C0F19010FC7005258DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		772F2C1119010FC7005258DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		772F2C1519010FC7005258DD /* CHTransformRefresh-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHTransformRefresh-Info.plist"; sourceTree = "<group>"; };
+		772F2C1719010FC7005258DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		772F2C1919010FC7005258DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		772F2C1B19010FC7005258DD /* CHTransformRefresh-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHTransformRefresh-Prefix.pch"; sourceTree = "<group>"; };
+		772F2C1C19010FC7005258DD /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		772F2C1D19010FC7005258DD /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		772F2C2519010FC7005258DD /* CHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		772F2C2619010FC7005258DD /* CHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		772F2C2819010FC7005258DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		772F2C2E19010FC7005258DD /* CHTransformRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHTransformRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		772F2C2F19010FC7005258DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		772F2C3719010FC7005258DD /* CHTransformRefreshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHTransformRefreshTests-Info.plist"; sourceTree = "<group>"; };
+		772F2C3919010FC7005258DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		772F2C3B19010FC7005258DD /* CHTransformRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTransformRefreshTests.m; sourceTree = "<group>"; };
+		772F2C4619011012005258DD /* CHTransformLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTransformLoadingView.h; sourceTree = "<group>"; };
+		772F2C4719011012005258DD /* CHTransformLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTransformLoadingView.m; sourceTree = "<group>"; };
+		772F2C4819011012005258DD /* UIScrollView+CHTransformRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CHTransformRefresh.h"; sourceTree = "<group>"; };
+		772F2C4919011012005258DD /* UIScrollView+CHTransformRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CHTransformRefresh.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		772F2C0719010FC7005258DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C1019010FC7005258DD /* CoreGraphics.framework in Frameworks */,
+				772F2C1219010FC7005258DD /* UIKit.framework in Frameworks */,
+				772F2C0E19010FC7005258DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772F2C2B19010FC7005258DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C3019010FC7005258DD /* XCTest.framework in Frameworks */,
+				772F2C3219010FC7005258DD /* UIKit.framework in Frameworks */,
+				772F2C3119010FC7005258DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		772F2C0119010FC7005258DD = {
+			isa = PBXGroup;
+			children = (
+				772F2C1319010FC7005258DD /* CHTransformRefresh */,
+				772F2C3519010FC7005258DD /* CHTransformRefreshTests */,
+				772F2C0C19010FC7005258DD /* Frameworks */,
+				772F2C0B19010FC7005258DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		772F2C0B19010FC7005258DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C0A19010FC7005258DD /* CHTransformRefresh.app */,
+				772F2C2E19010FC7005258DD /* CHTransformRefreshTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		772F2C0C19010FC7005258DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C0D19010FC7005258DD /* Foundation.framework */,
+				772F2C0F19010FC7005258DD /* CoreGraphics.framework */,
+				772F2C1119010FC7005258DD /* UIKit.framework */,
+				772F2C2F19010FC7005258DD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		772F2C1319010FC7005258DD /* CHTransformRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C4519011012005258DD /* CHTransformRefresh */,
+				772F2C1C19010FC7005258DD /* CHAppDelegate.h */,
+				772F2C1D19010FC7005258DD /* CHAppDelegate.m */,
+				772F2C2519010FC7005258DD /* CHViewController.h */,
+				772F2C2619010FC7005258DD /* CHViewController.m */,
+				772F2C2819010FC7005258DD /* Images.xcassets */,
+				772F2C1419010FC7005258DD /* Supporting Files */,
+			);
+			path = CHTransformRefresh;
+			sourceTree = "<group>";
+		};
+		772F2C1419010FC7005258DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C1519010FC7005258DD /* CHTransformRefresh-Info.plist */,
+				772F2C1619010FC7005258DD /* InfoPlist.strings */,
+				772F2C1919010FC7005258DD /* main.m */,
+				772F2C1B19010FC7005258DD /* CHTransformRefresh-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		772F2C3519010FC7005258DD /* CHTransformRefreshTests */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C3B19010FC7005258DD /* CHTransformRefreshTests.m */,
+				772F2C3619010FC7005258DD /* Supporting Files */,
+			);
+			path = CHTransformRefreshTests;
+			sourceTree = "<group>";
+		};
+		772F2C3619010FC7005258DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C3719010FC7005258DD /* CHTransformRefreshTests-Info.plist */,
+				772F2C3819010FC7005258DD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		772F2C4519011012005258DD /* CHTransformRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				772F2C4619011012005258DD /* CHTransformLoadingView.h */,
+				772F2C4719011012005258DD /* CHTransformLoadingView.m */,
+				772F2C4819011012005258DD /* UIScrollView+CHTransformRefresh.h */,
+				772F2C4919011012005258DD /* UIScrollView+CHTransformRefresh.m */,
+			);
+			path = CHTransformRefresh;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		772F2C0919010FC7005258DD /* CHTransformRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 772F2C3F19010FC7005258DD /* Build configuration list for PBXNativeTarget "CHTransformRefresh" */;
+			buildPhases = (
+				772F2C0619010FC7005258DD /* Sources */,
+				772F2C0719010FC7005258DD /* Frameworks */,
+				772F2C0819010FC7005258DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHTransformRefresh;
+			productName = CHTransformRefresh;
+			productReference = 772F2C0A19010FC7005258DD /* CHTransformRefresh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		772F2C2D19010FC7005258DD /* CHTransformRefreshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 772F2C4219010FC7005258DD /* Build configuration list for PBXNativeTarget "CHTransformRefreshTests" */;
+			buildPhases = (
+				772F2C2A19010FC7005258DD /* Sources */,
+				772F2C2B19010FC7005258DD /* Frameworks */,
+				772F2C2C19010FC7005258DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				772F2C3419010FC7005258DD /* PBXTargetDependency */,
+			);
+			name = CHTransformRefreshTests;
+			productName = CHTransformRefreshTests;
+			productReference = 772F2C2E19010FC7005258DD /* CHTransformRefreshTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		772F2C0219010FC7005258DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = hangchen;
+				TargetAttributes = {
+					772F2C2D19010FC7005258DD = {
+						TestTargetID = 772F2C0919010FC7005258DD;
+					};
+				};
+			};
+			buildConfigurationList = 772F2C0519010FC7005258DD /* Build configuration list for PBXProject "CHTransformRefresh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 772F2C0119010FC7005258DD;
+			productRefGroup = 772F2C0B19010FC7005258DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				772F2C0919010FC7005258DD /* CHTransformRefresh */,
+				772F2C2D19010FC7005258DD /* CHTransformRefreshTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		772F2C0819010FC7005258DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C2919010FC7005258DD /* Images.xcassets in Resources */,
+				772F2C1819010FC7005258DD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772F2C2C19010FC7005258DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C3A19010FC7005258DD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		772F2C0619010FC7005258DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C1A19010FC7005258DD /* main.m in Sources */,
+				772F2C1E19010FC7005258DD /* CHAppDelegate.m in Sources */,
+				772F2C4A19011012005258DD /* CHTransformLoadingView.m in Sources */,
+				772F2C4B19011012005258DD /* UIScrollView+CHTransformRefresh.m in Sources */,
+				772F2C2719010FC7005258DD /* CHViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772F2C2A19010FC7005258DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772F2C3C19010FC7005258DD /* CHTransformRefreshTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		772F2C3419010FC7005258DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 772F2C0919010FC7005258DD /* CHTransformRefresh */;
+			targetProxy = 772F2C3319010FC7005258DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		772F2C1619010FC7005258DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				772F2C1719010FC7005258DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		772F2C3819010FC7005258DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				772F2C3919010FC7005258DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		772F2C3D19010FC7005258DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		772F2C3E19010FC7005258DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		772F2C4019010FC7005258DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHTransformRefresh/CHTransformRefresh-Prefix.pch";
+				INFOPLIST_FILE = "CHTransformRefresh/CHTransformRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		772F2C4119010FC7005258DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHTransformRefresh/CHTransformRefresh-Prefix.pch";
+				INFOPLIST_FILE = "CHTransformRefresh/CHTransformRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		772F2C4319010FC7005258DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CHTransformRefresh.app/CHTransformRefresh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHTransformRefresh/CHTransformRefresh-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CHTransformRefreshTests/CHTransformRefreshTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		772F2C4419010FC7005258DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CHTransformRefresh.app/CHTransformRefresh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHTransformRefresh/CHTransformRefresh-Prefix.pch";
+				INFOPLIST_FILE = "CHTransformRefreshTests/CHTransformRefreshTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		772F2C0519010FC7005258DD /* Build configuration list for PBXProject "CHTransformRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				772F2C3D19010FC7005258DD /* Debug */,
+				772F2C3E19010FC7005258DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		772F2C3F19010FC7005258DD /* Build configuration list for PBXNativeTarget "CHTransformRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				772F2C4019010FC7005258DD /* Debug */,
+				772F2C4119010FC7005258DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		772F2C4219010FC7005258DD /* Build configuration list for PBXNativeTarget "CHTransformRefreshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				772F2C4319010FC7005258DD /* Debug */,
+				772F2C4419010FC7005258DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 772F2C0219010FC7005258DD /* Project object */;
+}
