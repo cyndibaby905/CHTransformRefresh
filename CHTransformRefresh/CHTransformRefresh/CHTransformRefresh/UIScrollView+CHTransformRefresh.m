@@ -70,13 +70,13 @@
 }
 @end
 
-#define GifRefreshControlHeight 103.0
+#define CHTransformRefreshHeight 103.0
 
 typedef enum
 {
-    GifPullToRefreshStateDrawing = 0,
-	GifPullToRefreshStateLoading,
-} GifPullToRefreshState;
+    CHTransformRefreshStateDrawing = 0,
+	CHTransformRefreshStateLoading,
+} CHTransformRefreshState;
 
 
 
@@ -99,7 +99,7 @@ static char UIScrollViewTransformRefresh;
 - (void)addPullToRefreshWithActionHandler:(void (^)(void))actionHandler
 {
     
-    CHTransformRefreshView *view = [[CHTransformRefreshView alloc] initWithFrame:CGRectMake(0, -GifRefreshControlHeight, self.bounds.size.width, GifRefreshControlHeight)];
+    CHTransformRefreshView *view = [[CHTransformRefreshView alloc] initWithFrame:CGRectMake(0, -CHTransformRefreshHeight, self.bounds.size.width, CHTransformRefreshHeight)];
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
         view.originalContentInsectY = 64;
     }
@@ -122,7 +122,7 @@ static char UIScrollViewTransformRefresh;
 
 
 @implementation CHTransformRefreshView {
-    GifPullToRefreshState _state;
+    CHTransformRefreshState _state;
     BOOL _isTrigged;
     CHTransformLoadingView *_circleView;
 }
@@ -161,13 +161,13 @@ static char UIScrollViewTransformRefresh;
     if (self.scrollView.contentOffset.y + self.originalContentInsectY <= 0) {
         if ([keyPath isEqualToString:@"pan.state"]) {
             if (self.scrollView.panGestureRecognizer.state == UIGestureRecognizerStateEnded && _isTrigged) {
-                [self setState:GifPullToRefreshStateLoading];
+                [self setState:CHTransformRefreshStateLoading];
                 [UIView animateWithDuration:0.2
                                       delay:0
                                     options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
                                  animations:^{
-                                     self.scrollView.contentOffset = CGPointMake(0, -GifRefreshControlHeight - self.originalContentInsectY);
-                                     self.scrollView.contentInset = UIEdgeInsetsMake(GifRefreshControlHeight + self.originalContentInsectY, 0.0f, 0.0f, 0.0f);
+                                     self.scrollView.contentOffset = CGPointMake(0, -CHTransformRefreshHeight - self.originalContentInsectY);
+                                     self.scrollView.contentInset = UIEdgeInsetsMake(CHTransformRefreshHeight + self.originalContentInsectY, 0.0f, 0.0f, 0.0f);
  
                                  }
                                  completion:^(BOOL finished) {
@@ -187,40 +187,40 @@ static char UIScrollViewTransformRefresh;
 
 - (void)scrollViewContentOffsetChanged
 {
-    if (_state != GifPullToRefreshStateLoading) {
-        if (self.scrollView.isDragging && self.scrollView.contentOffset.y + self.originalContentInsectY < -GifRefreshControlHeight && !_isTrigged) {
+    if (_state != CHTransformRefreshStateLoading) {
+        if (self.scrollView.isDragging && self.scrollView.contentOffset.y + self.originalContentInsectY < -CHTransformRefreshHeight && !_isTrigged) {
             _isTrigged = YES;
         }
         else {
-            if (self.scrollView.isDragging && self.scrollView.contentOffset.y + self.originalContentInsectY > -GifRefreshControlHeight) {
+            if (self.scrollView.isDragging && self.scrollView.contentOffset.y + self.originalContentInsectY > -CHTransformRefreshHeight) {
                 _isTrigged = NO;
             }
-            [self setState:GifPullToRefreshStateDrawing];
+            [self setState:CHTransformRefreshStateDrawing];
         }
     }
 }
 
 
-- (void)setState:(GifPullToRefreshState)aState{
+- (void)setState:(CHTransformRefreshState)aState{
 	
 	CGFloat offset = -(self.scrollView.contentOffset.y + self.originalContentInsectY);
     CGFloat percent = 0;
     if (offset < 0) {
         offset = 0;
     }
-    if (offset > GifRefreshControlHeight) {
-        offset = GifRefreshControlHeight;
+    if (offset > CHTransformRefreshHeight) {
+        offset = CHTransformRefreshHeight;
     }
-    percent = offset / GifRefreshControlHeight;
+    percent = offset / CHTransformRefreshHeight;
     _circleView.progress = percent;
 	switch (aState)
 	{
             
-        case GifPullToRefreshStateDrawing:
+        case CHTransformRefreshStateDrawing:
             [_circleView endAnimation];
             break;
             
-		case GifPullToRefreshStateLoading:
+		case CHTransformRefreshStateLoading:
             [_circleView startAnimation];
             break;
 		default:
@@ -232,10 +232,10 @@ static char UIScrollViewTransformRefresh;
 
 - (void)endLoading
 {
-    if (_state == GifPullToRefreshStateLoading) {
+    if (_state == CHTransformRefreshStateLoading) {
         _isTrigged = NO;
 
-        [self setState:GifPullToRefreshStateDrawing];
+        [self setState:CHTransformRefreshStateDrawing];
         
         [UIView animateWithDuration:0.2
                               delay:0
