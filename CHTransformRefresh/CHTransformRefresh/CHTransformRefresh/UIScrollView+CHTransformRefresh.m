@@ -132,8 +132,8 @@ static char UIScrollViewTransformRefresh;
     if (self) {
         self.backgroundColor = [UIColor blackColor];
         _circleView = [[CHTransformLoadingView alloc] initWithFrame:self.bounds];
-        _circleView.frontContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor redColor] withSize:CGSizeMake(20, 20)];
-        _circleView.backContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor blueColor] withSize:CGSizeMake(40, 40)];
+        _circleView.frontContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor redColor] withSize:CGSizeMake(40, 40)];
+        _circleView.backContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor blueColor] withSize:CGSizeMake(80, 80)];
         _circleView.progress = 0;
         [self addSubview:_circleView];
     }

@@ -133,6 +133,20 @@
     
     
     
+    CABasicAnimation *backZindexAnimation;
+    backZindexAnimation=[CABasicAnimation animationWithKeyPath:@"zPosition"];
+    backZindexAnimation.fromValue=[NSNumber numberWithFloat:5];
+    backZindexAnimation.toValue=[NSNumber numberWithFloat:10];
+    backZindexAnimation.duration = .6f;
+    backZindexAnimation.beginTime = CACurrentMediaTime() + 0.3f;
+    backZindexAnimation.repeatCount = HUGE_VALF;
+    backZindexAnimation.autoreverses = YES;
+    backZindexAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.95f :0.0f :0.98f :0.0f];
+    backZindexAnimation.removedOnCompletion = NO;
+
+    [_backView.layer addAnimation:backZindexAnimation forKey:@"backZIndexAnimation"];
+
+    
     
     
     CABasicAnimation *frontPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -143,7 +157,6 @@
     frontPositionAnimation.removedOnCompletion = NO;
     frontPositionAnimation.fillMode = kCAFillModeForwards;
     [_frontView.layer addAnimation:frontPositionAnimation forKey:@"frontAnimation"];
-    
     
     
     CABasicAnimation *frontSurroundkPositionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -157,6 +170,21 @@
     frontSurroundkPositionAnimation.removedOnCompletion = NO;
     [_frontView.layer addAnimation:frontSurroundkPositionAnimation forKey:@"backSurroundAnimation"];
     
+    
+    
+    CABasicAnimation *frontZindexAnimation;
+    frontZindexAnimation=[CABasicAnimation animationWithKeyPath:@"zPosition"];
+    frontZindexAnimation.fromValue=[NSNumber numberWithFloat:5];
+    frontZindexAnimation.toValue=[NSNumber numberWithFloat:10];
+    frontZindexAnimation.duration = .6f;
+    frontZindexAnimation.beginTime = CACurrentMediaTime() + 0.3f;
+    frontZindexAnimation.repeatCount = HUGE_VALF;
+    frontZindexAnimation.autoreverses = YES;
+    frontZindexAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.95f :0.0f :0.98f :0.0f];
+
+    frontZindexAnimation.removedOnCompletion = NO;
+    
+    [_frontView.layer addAnimation:frontZindexAnimation forKey:@"frontZIndexAnimation"];
 }
 
 
