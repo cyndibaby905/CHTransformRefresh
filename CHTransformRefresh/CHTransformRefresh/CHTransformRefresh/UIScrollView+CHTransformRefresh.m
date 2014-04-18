@@ -28,7 +28,7 @@
 #import <objc/runtime.h>
 
 
-
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface UIImage (Color)
 +(UIImage*)imageWithPureColorBackgroundImage:(UIColor*)color withSize:(CGSize)size;
@@ -132,8 +132,8 @@ static char UIScrollViewTransformRefresh;
     if (self) {
         self.backgroundColor = [UIColor blackColor];
         _circleView = [[CHTransformLoadingView alloc] initWithFrame:self.bounds];
-        _circleView.frontContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor redColor] withSize:CGSizeMake(40, 40)];
-        _circleView.backContentImage = [UIImage imageWithPureColorBackgroundImage:[UIColor blueColor] withSize:CGSizeMake(80, 80)];
+        _circleView.frontContentImage = [UIImage imageWithPureColorBackgroundImage:UIColorFromRGB(0xFB007C) withSize:CGSizeMake(40, 40)];
+        _circleView.backContentImage = [UIImage imageWithPureColorBackgroundImage:UIColorFromRGB(0x1065CB) withSize:CGSizeMake(80, 80)];
         _circleView.progress = 0;
         [self addSubview:_circleView];
     }
